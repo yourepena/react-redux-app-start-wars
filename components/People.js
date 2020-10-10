@@ -6,10 +6,14 @@ const divStyle = (color) => ({
 });
 
 const People = ({ onClick, name, eye_color }) => (
-  <li onClick={onClick} style={divStyle(eye_color)}>
-    {name}
-    <button>X</button>
-  </li>
+  <div className="container-row">
+    <div className="col-6" style={divStyle(eye_color)}>
+      {name}
+    </div>
+    <div className="col-6">
+      <button onClick={onClick} >X</button>
+    </div>
+  </div>
 )
 
 People.propTypes = {

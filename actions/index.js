@@ -3,9 +3,9 @@ export const getPeople = people => ({
   people
 });
 
-export const removePeople = id => ({
+export const removePeople = name => ({
   type: "REMOVE_PEOPLE",
-  id
+  name
 })
 
 export const getPeopleRequest =  () => {

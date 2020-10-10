@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import People from "../components/People";
 
 const PeopleList = ({ people, removePeople }) => (
-  <ul>
+  <div className="container-list">
     {people.map(p =>
      <People 
       key={p.name} 
       {...p}
       onClick={() => removePeople(p.name)} />
     )}
-  </ul>
+  </div>
 )
 
 
