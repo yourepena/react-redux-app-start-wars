@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from 'prop-types'
 import People from "../components/People";
 
-const PeopleList = ({ people, getPeople }) => (
+const PeopleList = ({ people, removePeople }) => (
   <ul>
     {people.map(p =>
      <People 
-      key={p.id} 
-      {...p} 
-      onClick={() => getPeople()} />
+      key={p.name} 
+      {...p}
+      onClick={() => removePeople(p.name)} />
     )}
   </ul>
 )
@@ -16,7 +16,6 @@ const PeopleList = ({ people, getPeople }) => (
 
 PeopleList.propTypes = {
   people: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     eye_color: PropTypes.string.isRequired
   }).isRequired).isRequired,

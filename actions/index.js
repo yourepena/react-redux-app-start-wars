@@ -3,6 +3,11 @@ export const getPeople = people => ({
   people
 });
 
+export const removePeople = id => ({
+  type: "REMOVE_PEOPLE",
+  id
+})
+
 export const getPeopleRequest =  () => {
     return async dispatch => {
         try {

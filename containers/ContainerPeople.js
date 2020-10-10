@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { getPeople } from '../actions'
+import { removePeople } from '../actions'
 import PeopleList from '../components/PeopleList'
  
 
@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getPeople: _ => dispatch(getPeople())
+  getPeople: id => dispatch(removePeople(id))
 })
 
 export default connect(

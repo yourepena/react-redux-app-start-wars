@@ -15,7 +15,7 @@ const People = ({ onClick, name, eye_color }) => (
 People.propTypes = {
   onClick: PropTypes.func.isRequired,
   name: PropTypes.bool.isRequired,
-  eyeColor: PropTypes.string.isRequired
+  eye_color: PropTypes.string.isRequired
 }
 
 export default People
