@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../Buttons.css'
 
 const divStyle = (color) => ({
   color: color,
 });
 
 const People = ({ onClick, name, eye_color }) => (
-  <div className="container-row">
-    <div className="col-6" style={divStyle(eye_color)}>
+  <div className="container-flex-row list-group-item">
+    <div style={divStyle(eye_color)}>
       {name}
     </div>
-    <div className="col-6">
-      <button onClick={onClick} >X</button>
+    <div>
+      <button className="btn btn-xs btn-danger" onClick={onClick} >X</button>
     </div>
   </div>
 )

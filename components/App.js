@@ -1,14 +1,14 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import ContainerPeople from '../containers/ContainerPeople'
 import GlobalStyle from './GlobalStyle'
 
 
 const App = () => {
   return (
-  <div>
-  <GlobalStyle/>
+  <Fragment>
+    <GlobalStyle/>
     <ContainerPeople/>
-  </div>
+  </Fragment>
 )}
 
  
