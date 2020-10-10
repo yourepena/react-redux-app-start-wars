@@ -1,15 +1,25 @@
 import React from "react";
 import PropTypes from 'prop-types'
 import People from "../components/People";
+import Select from 'react-select';
 
-const PeopleList = ({ people, removePeople }) => (
+const divStyle = _ => ({
+  marginTop: '10px',
+});
+
+const PeopleList = ({ people, removePeople, getPeople }) => (
   <div className="container-list">
-    {people.map(p =>
-     <People 
-      key={p.name} 
-      {...p}
-      onClick={() => removePeople(p.name)} />
-    )}
+    <h1>Lista personagens</h1>
+    <Select options={people.map(s => ({label: s.name, value: s.name}))} isMulti />
+    <div style={divStyle()}>
+        {people.map(p =>
+        <People 
+          key={p.name} 
+          {...p}
+          onClick={() => removePeople(p.name)} />
+        )}
+     </div>
+    {(!people || people.length === 0) && <button onClick={getPeople} className="btn btn-xs btn-success">Carregar os personagens</button>}
   </div>
 )
 

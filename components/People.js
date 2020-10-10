@@ -4,6 +4,7 @@ import '../Buttons.css'
 
 const divStyle = (color) => ({
   color: color,
+  fontWeight: 'bold',
 });
 
 const People = ({ onClick, name, eye_color }) => (

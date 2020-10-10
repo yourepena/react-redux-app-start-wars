@@ -1,8 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
  
 const GlobalStyle = createGlobalStyle`
+  h1 {
+    margin-top: 0;
+  }
  .container-list {
     max-width: 400px;
+    min-width: 200px;
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
